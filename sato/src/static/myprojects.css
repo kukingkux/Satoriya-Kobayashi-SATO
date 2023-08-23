@@ -57,7 +57,7 @@ body {
 }
 
 /* Utility !! DO NOT DELETE THESE CODE !!*/
-img {
+.content-projects img {
   max-width: 325px;
   max-height: 325px;
 }

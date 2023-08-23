@@ -15,7 +15,7 @@ import Discord from "./assets/img/icons/Discord.svg";
 // import Users from "./pages/Users";
 
 // lazy load componensts
-const About = lazy(() => import("./pages/About"));
+import About from "./pages/About";
 const Project = lazy(() => import("./pages/Project"));
 const Skills = lazy(() => import("./pages/Skills"));
 
@@ -46,7 +46,7 @@ const App: Component = () => {
         </div>
         <ul class="nav-list flex-grow-1">
           <li>
-            <A href="/" activeClass={styles.active}>
+            <A href="/aboutme" activeClass={styles.active}>
               <span class="link-name">About me</span>
             </A>
           </li>
@@ -73,7 +73,7 @@ const App: Component = () => {
       <Routes>
         <Route path="project" component={Project} />
         <Route path="skills" component={Skills} />
-        <Route path="/" component={About} />
+        <Route path="aboutme" component={About} />
       </Routes>
     </>
   );

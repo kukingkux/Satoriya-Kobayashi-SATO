@@ -7,6 +7,7 @@ import GfxGura from "../assets/img/contents/Instagram Gawr Gura GFX Case - Samsu
 import WebInterface from "../assets/img/contents/web_interface.png";
 import MobileInterface from "../assets/img/contents/mobile_interface.png";
 import AyameMockups from "../assets/img/contents/nakiri ayame mockups.png";
+import Background from "../assets/img/Crystal Background By Sato-2.png";
 import "../static/myprojects.css";
 
 const Project: Component = () => {
@@ -25,7 +26,15 @@ const Project: Component = () => {
         rel="stylesheet"
         href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
       />
-
+      <img
+        src={Background}
+        style={`max-width: 1160px;
+           max-height: auto;
+           position:absolute;
+           right:0;
+           bottom:0;
+           z-index:-1 `}
+      />
       <div class="container-fluid container-content">
         <div class="content d-flex flex-column justify-content-between">
           <div class="content-title">

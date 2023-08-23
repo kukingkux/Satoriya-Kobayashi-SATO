@@ -4,6 +4,7 @@ import Sato from "../assets/img/sato.svg";
 import Gura from "../assets/img/contents/gura.svg";
 import Megu from "../assets/img/contents/megumin.svg";
 import Towa from "../assets/img/contents/towa.svg";
+import Background from "../assets/img/Crystal Background By Sato.png";
 import "../static/aboutme.css";
 
 const About: Component = () => {
@@ -19,7 +20,19 @@ const About: Component = () => {
         href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
       />
 
-      <div class="container-fluid content-container">
+      <div
+        class="container-fluid content-container"
+        style={`background-images: ${Background}; background-size: contain`}
+      >
+        <img
+          src={Background}
+          style={`max-width: 1160px;
+           max-height: auto;
+           position:absolute;
+           right:0;
+           bottom:0;
+           z-index:-1 `}
+        />
         <div class="content d-flex flex-column justify-content-evenly">
           <div class="content-title">
             <h3 class="sub-title">

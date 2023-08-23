@@ -5,6 +5,7 @@ import Photoshop from "../assets/img/icons/Photoshop.svg";
 import Figma from "../assets/img/icons/Figma.svg";
 import UIUX from "../assets/img/icons/UIUX.svg";
 import CorelDraw from "../assets/img/icons/Coreldraw.svg";
+import Background from "../assets/img/Crystal Background By Sato-3.png";
 
 import "../static/skills.css";
 
@@ -24,7 +25,15 @@ const Skills: Component = () => {
         rel="stylesheet"
         href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
       />
-
+      <img
+        src={Background}
+        style={`max-width: 1160px;
+           height: auto;
+           position:absolute;
+           right:0;
+           bottom:0;
+           z-index:-1 `}
+      />
       <div class="container-fluid container-content">
         <div class="content d-flex flex-column justify-content-between">
           <div class="content-title">
