@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope";
+}
+
+body {
+  overflow: hidden;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* CONTENT */
+.content-container {
+  max-width: 100% !important;
+  min-height: 100vh;
+}
+
+.content {
+  margin-top: 60px;
+  margin-left: 25%;
+  height: 350px;
+}
+
+.content h3.sub-title {
+  font-weight: 500;
+  font-size: 24px;
+  color: #000000cc;
+  line-height: 0px;
+}
+
+.content h1.title {
+  font-weight: 800;
+  color: #000000cc;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.content .title span {
+  color: #000000;
+}
+.content .sub-title span {
+  color: #000000;
+  font-weight: 700;
+}
+
+.content p.content-text {
+  max-width: 600px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  color: #808080;
+}
+
+.content p.location-text {
+  color: #000;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+div.contact-me {
+  width: 150px;
+  height: 45px;
+  background: #000;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.contact-me p {
+  font-size: 16px;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.content.bawah {
+  height: 300px;
+}
+
+h2.title {
+  color: #000000cc;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.content-charas {
+  width: 500px;
+}
+
+.fig h2 {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.hero {
+  position: absolute;
+  right: 25px;
+  bottom: 40px;
+  transform: scale(1.12);
+}

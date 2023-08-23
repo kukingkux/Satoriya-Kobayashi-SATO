@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope";
+}
+
+body {
+  overflow: hidden;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* CONTENT */
+.content-container {
+  max-width: 100%;
+  min-height: 100vh;
+}
+
+.content {
+  margin-top: 60px;
+  margin-left: 23%;
+  height: 700px;
+}
+
+.content-title h1.title {
+  color: #000;
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.content-main {
+  max-width: 1120px;
+  height: 700px;
+}
+
+.content-projects.top img {
+  width: 325px;
+  height: 325px;
+}
+
+.content-projects.bot img {
+  max-width: 325px;
+}
+
+.content-projects img {
+  transition: 0.25s all ease-in-out;
+  border-radius: 5px;
+}
+
+.content-projects:hover img {
+  transform: scale(1.08);
+  transition: 0.25s all ease-in-out;
+}
+
+/* Utility !! DO NOT DELETE THESE CODE !!*/
+img {
+  max-width: 325px;
+  max-height: 325px;
+}
+
+.crop-img {
+  object-fit: cover;
+}
+.crop-img:hover {
+  object-fit: scale-down;
+}
