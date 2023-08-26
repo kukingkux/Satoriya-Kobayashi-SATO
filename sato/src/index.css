@@ -17,6 +17,10 @@ body {
   width: 100%;
 }
 
+a {
+  cursor: pointer;
+}
+
 .sidebar {
   position: fixed;
   top: 0;

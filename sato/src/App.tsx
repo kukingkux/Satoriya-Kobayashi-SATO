@@ -85,10 +85,19 @@ const App: Component = () => {
         </div>
 
         <div class="social flex-shrink-1" classList={{ slide: slide() }}>
-          <img src={Facebook} alt="Facebook" />
-          <img src={Instagram} alt="Instagram" />
-          <img src={Twitter} alt="X" />
-          <img src={Discord} alt="Discord" />
+          <a href="facebook" target="blank">
+            <img src={Facebook} alt="Facebook" />
+          </a>
+          <a href="instagram" target="blank">
+            <img src={Instagram} alt="Instagram" />
+          </a>
+
+          <a href="twitter" target="blank">
+            <img src={Twitter} alt="X" />
+          </a>
+          <a href="discord" target="blank">
+            <img src={Discord} alt="Discord" />
+          </a>
         </div>
       </div>
 

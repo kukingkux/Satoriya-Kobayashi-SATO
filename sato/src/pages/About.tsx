@@ -1,5 +1,6 @@
 import type { Component } from "solid-js";
 import { render } from "solid-js/web";
+import { onCleanup, createEffect } from "solid-js";
 
 import Sato from "../assets/img/sato.svg";
 import Gura from "../assets/img/contents/gura.svg";
@@ -53,10 +54,14 @@ const About: Component = () => {
                 Limbangan kersana, Brebes, Central Java, 52264, Indonesia
               </p>
             </div>
-            <div class="contact-me d-flex align-items-center justify-content-evenly">
-              <i class="uil uil-whatsapp"></i>
-              <p>Contact Me</p>
-            </div>
+
+            <button class="contact-me d-flex align-items-center justify-content-evenly">
+              <a href="https://wa.me/+6287811867017" target="blank">
+                <i class="uil uil-whatsapp"></i>
+                <p>Contact Me</p>
+              </a>
+            </button>
+
             <div class="content-bawah-mobile">
               <div class="content-title">
                 <h2 class="title">My favorites character</h2>
