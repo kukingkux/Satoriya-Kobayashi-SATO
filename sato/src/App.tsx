@@ -5,11 +5,14 @@ import styles from "./App.module.css";
 import Store from "./store";
 import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
+
 import Logo from "./assets/img/logo/Logo.svg";
 import Facebook from "./assets/img/icons/Facebook.svg";
 import Instagram from "./assets/img/icons/Instagram.svg";
 import Twitter from "./assets/img/icons/Twitter.svg";
 import Discord from "./assets/img/icons/Discord.svg";
+
+import { createSignal } from "solid-js";
 
 // import Home from "./pages/Home";
 // import Users from "./pages/Users";
@@ -23,6 +26,11 @@ const { localStorage } = window;
 
 const App: Component = () => {
   const [store, setStore] = Store;
+  const [slide, setSlide] = createSignal(false);
+
+  function handleClick() {
+    setSlide(!slide());
+  }
 
   onMount(() => {
     if (store.users.length === 0) {
@@ -41,10 +49,13 @@ const App: Component = () => {
   return (
     <>
       <div class="container sidebar d-flex flex-column">
-        <div class="logo">
+        <div class="logo-wrap" classList={{ slide: slide() }}>
           <img src={Logo} alt="logo" />
         </div>
-        <ul class="nav-list flex-grow-1">
+        <ul
+          class="nav-list flex-grow-1 d-flex flex-column"
+          classList={{ slide: slide() }}
+        >
           <li>
             <A href="/aboutme" activeClass={styles.active}>
               <span class="link-name">About me</span>
@@ -62,7 +73,18 @@ const App: Component = () => {
           </li>
         </ul>
 
-        <div class="social flex-shrink-1">
+        <div class="hamburger">
+          <input
+            type="checkbox"
+            checked-={slide()}
+            onChange={() => setSlide(!slide())}
+          />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="social flex-shrink-1" classList={{ slide: slide() }}>
           <img src={Facebook} alt="Facebook" />
           <img src={Instagram} alt="Instagram" />
           <img src={Twitter} alt="X" />
@@ -73,7 +95,7 @@ const App: Component = () => {
       <Routes>
         <Route path="project" component={Project} />
         <Route path="skills" component={Skills} />
-        <Route path="aboutme" component={About} />
+        <Route path={["aboutme", "/"]} component={About} />
       </Routes>
     </>
   );

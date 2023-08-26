@@ -1,4 +1,5 @@
 import type { Component } from "solid-js";
+import { render } from "solid-js/web";
 
 import Sato from "../assets/img/sato.svg";
 import Gura from "../assets/img/contents/gura.svg";
@@ -24,17 +25,10 @@ const About: Component = () => {
         class="container-fluid content-container"
         style={`background-images: ${Background}; background-size: contain`}
       >
-        <img
-          src={Background}
-          style={`max-width: 1160px;
-           max-height: auto;
-           position:absolute;
-           right:0;
-           bottom:0;
-           z-index:-1 `}
-        />
-        <div class="content d-flex flex-column justify-content-evenly">
-          <div class="content-title">
+        <img src={Background} class="background" />
+        <img src={Background} class="background-mobile" />
+        <div class="content-about d-flex flex-column justify-content-evenly">
+          <div>
             <h3 class="sub-title">
               Hello, i'm <span>Sato!</span>
             </h3>
@@ -43,15 +37,16 @@ const About: Component = () => {
             </h1>
             <h3 class="sub-title">I’m an UI/UX and GFX designer</h3>
           </div>
-          <div class="content-main">
+          <div class="content-main-about">
             <p class="content-text">
               I am a passionate UI/UX designer dedicated to creating intuitive
               and visually appealing digital experiences. With 6 months of
-              experience in the field.
-              <br />
-              and also i’m a GFX designer with 2 years of experience in my home
-              and school.
+              experience in the field. and also i’m a GFX designer with 2 years
+              of experience in my home and school.
             </p>
+            <div class="hero-mobile">
+              <img src={Sato} alt="Hero" />
+            </div>
             <div class="content-loc d-flex align-items-center  mb-4">
               <span class="material-symbols-rounded"> location_on </span>
               <p class="location-text">
@@ -62,9 +57,28 @@ const About: Component = () => {
               <i class="uil uil-whatsapp"></i>
               <p>Contact Me</p>
             </div>
+            <div class="content-bawah-mobile">
+              <div class="content-title">
+                <h2 class="title">My favorites character</h2>
+              </div>
+              <div class="content-charas d-flex justify-content-between">
+                <div class="fig gura">
+                  <img src={Gura} alt="Gura" />
+                  <h2>Gawr Gura</h2>
+                </div>
+                <div class="fig megumin">
+                  <img src={Megu} alt="めぐみん" />
+                  <h2>めぐみん</h2>
+                </div>
+                <div class="fig towa">
+                  <img src={Towa} alt="常闇・トワ" />
+                  <h2>常闇・トワ</h2>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="content bawah d-flex flex-column justify-content-evenly mt-4">
+        <div class="content-about bawah d-flex flex-column justify-content-evenly">
           <div class="content-title">
             <h2 class="title">My favorites character</h2>
           </div>

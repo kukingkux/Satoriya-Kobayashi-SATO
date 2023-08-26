@@ -25,22 +25,15 @@ const Skills: Component = () => {
         rel="stylesheet"
         href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
       />
-      <img
-        src={Background}
-        style={`max-width: 1160px;
-           height: auto;
-           position:absolute;
-           right:0;
-           bottom:0;
-           z-index:-1 `}
-      />
+      <img src={Background} class="background" />
+      <img src={Background} class="background-mobile" />
       <div class="container-fluid container-content">
-        <div class="content d-flex flex-column justify-content-between">
+        <div class="content-skills d-flex flex-column justify-content-between">
           <div class="content-title">
             <h1 class="title">My skills</h1>
           </div>
           <div class="content-main ms-2">
-            <div class="content-skills top row justify-content-between">
+            <div class="top row justify-content-between">
               <div class="card-wrapper ps col-auto">
                 <div class="card-head d-flex justify-content-start align-items-center mt-3">
                   <img src={Photoshop} alt="Adobe Photoshop" />
@@ -74,7 +67,7 @@ const Skills: Component = () => {
                 </div>
               </div>
             </div>
-            <div class="content-skills bot row justify-content-between mt-3">
+            <div class="bot row justify-content-between mt-3">
               <div class="card-wrapper design col-auto">
                 <div class="card-head d-flex justify-content-start align-items-center mt-3">
                   <img src={UIUX} alt="UI/UX Design" />
